@@ -4,16 +4,16 @@ import { App } from 'components/App';
 import './index.css';
 
 import { Profile } from 'components/profile/Profile';
-import user from './components/profile/user.json';
+import user from './fileJson/user.json';
 
 import { Statistics } from 'components/statistics/Statistics';
-import data from './components/statistics/data.json';
+import data from './fileJson/data.json';
 
 import { FriendList } from 'components/friend-list/FriendList';
-import friends from './components/friend-list/friends.json';
+import friends from './fileJson/friends.json';
 
 import { TransactionHistory } from 'components/transaction-history/TransactionHistory';
-import transactions from './components/transaction-history/transactions.json';
+import transactions from './fileJson/transactions.json';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -32,4 +32,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </App>
   </React.StrictMode>
 );
-console.log("nello");
