@@ -1,4 +1,16 @@
-export const App = ({ children }) => {
+import { Profile } from './profile/Profile';
+import user from './FileJson/user.json';
+
+import { Statistics } from './statistics/Statistics';
+import data from './FileJson/data.json';
+
+import { FriendList } from './friend-list/FriendList';
+import friends from './FileJson/friends.json';
+
+import { TransactionHistory } from './transaction-history/TransactionHistory';
+import transactions from './FileJson/transactions.json';
+
+export const App = () => {
   return (
     <div
       style={{
@@ -10,7 +22,17 @@ export const App = ({ children }) => {
         color: '#010101',
       }}
     >
-      {children}
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </div>
   );
 };
